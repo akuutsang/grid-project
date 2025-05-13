@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.grid-container {
+  display: grid;
+  grid-template: repeat(6, minmax(150px, 1fr)) / repeat(6, minmax(150px, 1fr));
+  grid-template-areas: "sidebar sidebar header header header header" "sidebar sidebar content content content content" "sidebar sidebar  content content content content" "sidebar sidebar content content content content " "sidebar sidebar content content content content ";
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+#header {
+  grid-area: header;
+  background-color: blue;
+}
+#side-bar {
+  grid-area: sidebar;
+  background-color: bisque;
+}
+#content {
+  grid-area: content;
+  background-color: brown;
+}
