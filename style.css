@@ -19,8 +19,28 @@
 #side-bar {
   grid-area: sidebar;
   background-color: bisque;
+  justify-items: center;
+  font-size: larger;
 }
 #content {
   grid-area: content;
   background-color: brown;
+}
+
+.svg {
+  width: 30px;
+}
+
+.sidebar-content {
+  display: flex;
+}
+
+.first {
+  background-color: chartreuse;
+}
+.second {
+  background-color: rgb(232, 23, 194);
+}
+.third {
+  background-color: crimson;
 }
