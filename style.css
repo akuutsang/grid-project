@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+  padding: 0 50px;
+}
+
 .grid-container {
   display: grid;
   grid-template: repeat(6, minmax(150px, 1fr)) / repeat(6, minmax(150px, 1fr));
@@ -12,13 +17,13 @@
 }
 
 #header {
-  padding: 10px;
+  padding: 0px 40px;
   grid-area: header;
 }
 
 #side-bar {
   grid-area: sidebar;
-  /* background-color: rgb(3, 167, 249); */
+  background-color: #0d83dd;
   font-size: larger;
 }
 
@@ -26,7 +31,7 @@
   grid-area: content;
   display: flex;
   flex-direction: column;
-  background-color: rgb(226, 222, 222);
+  background-color: #f1f3f6;
   padding: 20px;
 }
 
@@ -35,23 +40,50 @@
 }
 
 .wrapper {
-  gap: 10px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
 }
 .card-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  color: rgb(107, 105, 105);
+  height: 95%;
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template: repeat(6, 1fr) / repeat(6, 1fr);
 }
 
+.side-container {
+  width: 85%;
+}
+
+h5 {
+  color: #222;
+}
+
 .card-items {
+  width: 100%;
   border-radius: 5px;
-  padding: 10px;
-  border-left: 10px solid rgb(242, 218, 84);
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
   background-color: white;
+  border-left: 10px solid #f4b400;
+}
+
+.card-text {
+  height: 80%;
+}
+
+.svg-icons {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
 }
 
 #super-cool-project {
@@ -116,7 +148,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 27vh;
+  height: 30vh;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
@@ -136,51 +168,69 @@
 }
 
 .trending {
-  margin: 10px 0 10px 0;
-}
-
-.svg {
-  width: 30px;
+  margin: 20px 0 20px 0;
 }
 
 .second-wrapper {
   font-size: 15px;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  background-color: blue;
+  padding: 10px;
 }
 
 .sidebar-content:hover,
 .sidebar-content.active {
+  width: 90%;
   transform: scale(1.1);
   font-size: 18px;
-  background-color: #e0e0ff;
+  background-color: #5799e9;
   color: #222;
 }
+
 .sidebar-content {
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
   display: flex;
-  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
 
 .first {
-  background-color: chartreuse;
+  width: 100%;
+  height: 10vh;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  font-weight: 600;
 }
+
 .second {
-  background-color: rgb(232, 23, 194);
+  height: 35vh;
+  align-content: center;
+  margin-bottom: 10px;
 }
 .third {
-  background-color: crimson;
+  align-content: center;
+}
+.text {
+  width: 50%;
+}
+
+.svg {
+  width: 25px;
 }
 .top {
   display: flex;
   height: 50%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .search-wrapper {
-  width: 90vw;
+  width: 50vw;
   display: flex;
   align-items: center;
 }
@@ -194,19 +244,20 @@
   height: 20px;
 }
 input {
-  height: 20px;
-  width: 98%;
+  height: 30px;
+  width: 100%;
   border-radius: 20px;
   border: 0px;
-  background-color: rgb(226, 222, 222);
+  background-color: #f1f3f6;
 }
 .top-right {
-  margin: 10px;
+  margin: 15px;
   padding: 0 30px 0 30px;
-  width: 100vw;
+  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 600;
 }
 
 .bell-svg {
@@ -215,13 +266,14 @@ input {
 }
 
 .dp {
-  width: 40px;
-  height: 40px;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 .picture {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
@@ -232,6 +284,7 @@ input {
 }
 
 .left {
+  justify-content: space-between;
   display: flex;
   font-size: smaller;
 }
@@ -242,7 +295,7 @@ span {
 }
 
 .right {
-  width: 50vw;
+  width: 25vw;
   display: flex;
   justify-content: space-between;
 }
@@ -250,7 +303,7 @@ span {
   color: white;
   border-radius: 20px;
   border: 0;
-  background-color: rgb(3, 167, 249);
+  background-color: #0d83dd;
   height: 30px;
   width: 80px;
   padding: 0 10px 0 10px;
@@ -258,7 +311,4 @@ span {
 
 .icons {
   width: 18px;
-}
-
-.topic {
 }
