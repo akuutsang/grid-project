@@ -74,3 +74,7 @@ Create a multi-section dashboard layout using **CSS Grid** as the primary layout
 ![Dashboard Preview](assets/dashboard-project.png)
 
 [Live Demo](https://earnest-custard-118f2e.netlify.app/)
+
+## License
+
+This project is licensed under the [MIT License](/LICENSE).
